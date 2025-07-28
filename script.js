@@ -25,4 +25,13 @@ function createPassword(){
     passwordBox.value = Password;
 }
 
+function copyPassword(){
+    passwordBox.select();
+    document.execCommand("copy");
+}
+
 Passwordgenerator.addEventListener("click", createPassword);
+
+
+const copyImg = document.querySelector(".display img");
+copyImg.addEventListener("click", copyPassword);
